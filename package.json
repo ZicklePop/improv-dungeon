@@ -1,0 +1,57 @@
+{
+  "name": "TEMPLATE_NAME",
+  "version": "0.0.1",
+  "license": "Unlicense",
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions",
+    "build": "next build",
+    "dev": "next",
+    "lint": "standard",
+    "next": "next",
+    "now": "vercel dev",
+    "start": "next start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.12.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "^11.1.0",
+    "next-pwa": "^5.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-intersection-observer": "^8.32.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "jest": "^27.0.6",
+    "next-compose-plugins": "^2.2.1",
+    "postcss": "^8.3.6",
+    "react-test-renderer": "^17.0.2",
+    "standard": "^16.0.3",
+    "tailwindcss": "^2.2.7",
+    "vercel": "^23.1.2"
+  },
+  "resolutions": {
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.5",
+    "node-fetch": "^2.6.1",
+    "ssri": "^6.0.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "standard": {
+    "env": "jest",
+    "ignore": [
+      "/public/sw.js",
+      "/public/workbox-*.js"
+    ]
+  }
+}

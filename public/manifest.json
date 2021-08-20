@@ -1,0 +1,33 @@
+{
+  "name": "TEMPLATE_NAME",
+  "short_name": "TEMPLATE_NAME",
+  "description": "TEMPLATE_DESCRIPTION",
+  "theme_color": "TEMPLATE_COLOR",
+  "background_color": "TEMPLATE_BG_COLOR",
+  "display": "minimal-ui",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "1024x1204",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [],
+  "splash_pages": null
+}
