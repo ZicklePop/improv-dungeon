@@ -1,7 +1,3 @@
-# TEMPLATE_NATE
+# improv-dungeon
 
-TEMPLATE_DESCRIPTION
-
-TEMPLATE_KEYWORDS
-TEMPLATE_COLOR
-TEMPLATE_BG_COLOR
+Like AI Dungeon but for improv comedy

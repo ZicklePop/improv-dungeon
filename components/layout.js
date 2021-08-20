@@ -5,7 +5,7 @@ import polyfills from '../utils/polyfills'
 polyfills()
 
 const cx = {
-  main: 'max-w-lg lg:max-w-xl m-auto font-sans px-2',
+  main: 'max-w-lg m-auto font-sans px-2',
   header: 'leading-tight font-thin text-4xl lg:pb-3 lg:mb-8',
   headerLink: 'no-underline',
   logo: 'inline-block mr-2 align-middle',
@@ -29,7 +29,7 @@ const Layout = ({ title, description, children, className, cover }) => {
       </Head>
       <style global jsx>
         {`
-          body {
+          body, input {
             color: #fff;
             background: #000;
           }
@@ -43,14 +43,11 @@ const Layout = ({ title, description, children, className, cover }) => {
           h1 a {
             color: #fff;
           }
-          article {
-            border-color: rgb(255,255,255,.25);
-          }
           .cv-auto {
             content-visibility: auto;
           }
           @media (prefers-color-scheme: light) {
-            body {
+            body, input {
               color: #111;
               background: #fff;
             }
@@ -76,8 +73,8 @@ Layout.propTypes = {
 }
 
 Layout.defaultProps = {
-  title: 'TEMPLATE_NAME',
-  description: 'TEMPLATE_DESCRIPTION',
+  title: 'improv-dungeon',
+  description: 'Like AI Dungeon but for improv comedy',
   className: '',
   cover: '/cover.png'
 }
