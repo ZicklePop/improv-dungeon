@@ -1,34 +1,34 @@
-import { useCallback, useEffect, useState } from "react";
-import Layout from "../components/layout";
-import ChatBubble from "../components/chat-bubble";
-import MessageComposer from "../components/message-composer";
-import last from "lodash/last";
-import has from "lodash/has";
-import ai from "../utils/ai";
+import { useCallback, useEffect, useState } from 'react'
+import Layout from '../components/layout'
+import ChatBubble from '../components/chat-bubble'
+import MessageComposer from '../components/message-composer'
+import last from 'lodash/last'
+import has from 'lodash/has'
+import ai from '../utils/ai'
 
 const Index = () => {
-  const [chatHistory, setChatHistory] = useState([]);
+  const [chatHistory, setChatHistory] = useState([])
   const addToChatHistory = useCallback(
     (type, message) => {
-      setChatHistory([...chatHistory, { message, type }]);
+      setChatHistory([...chatHistory, { message, type }])
     },
     [chatHistory]
-  );
+  )
 
   useEffect(() => {
-    const lastMessage = last(chatHistory);
-    if (has(lastMessage, "type") && lastMessage.type === "sent") {
-      addToChatHistory("received", ai(lastMessage.message));
+    const lastMessage = last(chatHistory)
+    if (has(lastMessage, 'type') && lastMessage.type === 'sent') {
+      addToChatHistory("received", ai(lastMessage.message))
     }
 
     let timeout = window.setTimeout(() => {
-      document.querySelector("form").scrollIntoView(true);
-    }, 1);
+      document.querySelector('form').scrollIntoView(true)
+    }, 1)
 
     return () => {
-      clearTimeout(timeout);
-    };
-  }, [chatHistory, addToChatHistory]);
+      clearTimeout(timeout)
+    }
+  }, [chatHistory, addToChatHistory])
 
   return (
     <Layout>
@@ -47,7 +47,7 @@ const Index = () => {
 
       <MessageComposer onSubmit={addToChatHistory} />
     </Layout>
-  );
-};
+  )
+}
 
-export default Index;
+export default Index
