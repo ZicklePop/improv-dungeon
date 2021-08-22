@@ -22,14 +22,6 @@ const Index = () => {
     if (has(lastMessage, 'type') && lastMessage.type === 'sent') {
       addToChatHistory("received", ai(lastMessage.message))
     }
-
-    let timeout = window.setTimeout(() => {
-      document.querySelector('form').scrollIntoView(true)
-    }, 1)
-
-    return () => {
-      clearTimeout(timeout)
-    }
   }, [chatHistory, addToChatHistory])
 
   return (
