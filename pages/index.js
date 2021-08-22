@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import Layout from '../components/layout'
 import ChatBubble from '../components/chat-bubble'
+import ChatContainer from '../components/chat-container'
+import ChatWindow from '../components/chat-window'
 import MessageComposer from '../components/message-composer'
 import last from 'lodash/last'
 import has from 'lodash/has'
@@ -32,8 +34,8 @@ const Index = () => {
 
   return (
     <Layout>
-      <h1 className="text-3xl font-bold leading-loose">Improv Dungeon</h1>
-      <p className="mb-3">
+      <h1 className="mx-2 text-3xl font-bold leading-loose">Improv Dungeon</h1>
+      <p className="mx-2 mb-3">
         Write out your scenario and the AI will play along!
         <br />
         <em>
@@ -41,11 +43,15 @@ const Index = () => {
         </em>
       </p>
 
-      {chatHistory.map(({ message, type }, i) => (
-        <ChatBubble key={i} type={type} message={message} />
-      ))}
+      <ChatWindow>
+        <ChatContainer>
+        {chatHistory.map(({ message, type }, i) => (
+          <ChatBubble key={i} type={type} message={message} />
+        ))}
+        </ChatContainer>
+        <MessageComposer onSubmit={addToChatHistory} />
+      </ChatWindow>
 
-      <MessageComposer onSubmit={addToChatHistory} />
     </Layout>
   )
 }

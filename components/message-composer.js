@@ -14,16 +14,16 @@ const MessageComposer = ({ onSubmit }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="text-center">
+    <form onSubmit={handleSubmit} className="flex w-full m-0 p-0 shadow">
       <input
         ref={inputRef}
         type="text" 
         placeholder="Write your dialog"
-        className="appearance-none border border-blue-700 p-2 my-2 rounded-l rounded-r-none w-60 md:w-80"
+        className="flex-1 appearance-none border-t border-gray-200 p-2 w-auto rounded-none dark:text-white dark:bg-black dark:border-gray-800"
       />
       <button
         type="submit"
-        className="appearance-none border border-blue-700 bg-blue-700 p-2 my-2 rounded-r rounded-l-none text-white"
+        className="flex-none appearance-none border-t border-green-500 bg-green-500 hover:bg-green-600 px-3 py-2 text-white transition-colors"
       >
         Send
       </button>

@@ -5,7 +5,7 @@ import polyfills from '../utils/polyfills'
 polyfills()
 
 const cx = {
-  main: 'max-w-lg m-auto font-sans px-2',
+  main: 'max-w-lg m-auto font-sans',
   header: 'leading-tight font-thin text-4xl lg:pb-3 lg:mb-8',
   headerLink: 'no-underline',
   logo: 'inline-block mr-2 align-middle',
@@ -29,7 +29,7 @@ const Layout = ({ title, description, children, className, cover }) => {
       </Head>
       <style global jsx>
         {`
-          body, input {
+          body {
             color: #fff;
             background: #000;
           }
@@ -40,23 +40,15 @@ const Layout = ({ title, description, children, className, cover }) => {
           a:hover {
             text-decoration: underline;
           }
-          h1 a {
-            color: #fff;
-          }
           .cv-auto {
             content-visibility: auto;
           }
           @media (prefers-color-scheme: light) {
-            body, input {
+            body {
               color: #111;
               background: #fff;
             }
-            h1 a {
-              color: #111;
-            }
-            article {
-              border-color: rgba(0,0,0,.12);
-            }
+          }
         `}
       </style>
       {children}

@@ -24,7 +24,7 @@ const ChatBubble = ({ type, message }) => {
     <div className={`cv-auto ${type === 'received' ? '' : 'text-right'}`}>
       <p
         className={`inline-block p-2 my-2 leading-normal text-white rounded-lg break-all ${
-          type === "received"
+          type === 'received'
             ? 'bg-pink-700 rounded-bl-none'
             : 'bg-blue-700 rounded-br-none'
         }`}
