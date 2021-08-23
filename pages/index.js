@@ -1,14 +1,16 @@
 import { useCallback, useEffect, useState } from 'react'
-import Layout from '../components/layout'
+import Ad from '../components/ad'
 import ChatBubble from '../components/chat-bubble'
 import ChatContainer from '../components/chat-container'
 import ChatWindow from '../components/chat-window'
+import Layout from '../components/layout'
 import MessageComposer from '../components/message-composer'
-import last from 'lodash/last'
-import has from 'lodash/has'
 import ai from '../utils/ai'
+import fetch from 'isomorphic-unfetch'
+import has from 'lodash/has'
+import last from 'lodash/last'
 
-const Index = () => {
+const Index = ({ ad }) => {
   const [chatHistory, setChatHistory] = useState([])
   const addToChatHistory = useCallback(
     (type, message) => {
@@ -43,9 +45,17 @@ const Index = () => {
         </ChatContainer>
         <MessageComposer onSubmit={addToChatHistory} />
       </ChatWindow>
-
+      <Ad {...ad} />
     </Layout>
   )
+}
+
+Index.getInitialProps = async function () {
+  const res = await fetch('https://melkat.deals/api')
+  const ad = await res.json()
+  return {
+    ad
+  }
 }
 
 export default Index
