@@ -37,7 +37,7 @@ const ChatContainer = ({ children }) => {
       className="flex-1 w-full px-2 overflow-auto sm:rounded-t-xl h-96 shadow-inner min-h-full border-b border-gray-200 dark:border-gray-800"
       style={{ minHeight: '158px' }}
     >
-      <div className="flex flex-wrap mh-full content-end">
+      <div className="flex flex-wrap h-full content-end">
         {children}
       </div>
     </div>
