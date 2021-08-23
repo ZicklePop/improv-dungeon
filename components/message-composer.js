@@ -19,11 +19,11 @@ const MessageComposer = ({ onSubmit }) => {
         ref={inputRef}
         type="text" 
         placeholder="Write your dialog"
-        className="flex-1 appearance-none border-t border-gray-200 p-2 w-auto rounded-none dark:text-white dark:bg-black dark:border-gray-800"
+        className="flex-1 appearance-none p-2 w-auto rounded-none dark:text-white dark:bg-black  focus:ring-2 focus:ring-blue-500 focus:ring-inset outline-none sm:rounded-bl-xl"
       />
       <button
         type="submit"
-        className="flex-none appearance-none border-t border-green-500 bg-green-500 hover:bg-green-600 px-3 py-2 text-white transition-colors"
+        className="flex-none appearance-none bg-green-500 px-3 py-2 text-white transition-colors focus:ring-2 focus:ring-green-300 focus:ring-inset outline-none rounded-none sm:rounded-br-xl bg-green-600 hover:bg-green-500 active:bg-green-700"
       >
         Send
       </button>
