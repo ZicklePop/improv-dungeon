@@ -1,5 +1,5 @@
 const Ad = ({ name, url }) => (
-  <p className="my-4 text-black dark:text-white sm:text-center">
+  <p className="mx-2 my-4 text-black dark:text-white sm:text-center">
     <a href={'https://melkat.deals/'} className={'font-bold text-black dark:text-white'}>
       melkat.deals
     </a>
