@@ -65,8 +65,8 @@ Layout.propTypes = {
 }
 
 Layout.defaultProps = {
-  title: 'improv-dungeon',
-  description: 'Like AI Dungeon but for improv comedy',
+  title: 'Improv Dungeon - your new favorite improv partner',
+  description: 'Write out your scenario and the AI will play along!',
   className: '',
   cover: '/cover.png'
 }
