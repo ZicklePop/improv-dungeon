@@ -30,7 +30,7 @@
     "postcss": "^8.4.12",
     "react-test-renderer": "^17.0.2",
     "tailwindcss": "^3.0.23",
-    "vercel": "^24.0.0"
+    "vercel": "^24.0.1"
   },
   "jest": {
     "transform": {
