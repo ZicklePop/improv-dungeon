@@ -24,7 +24,7 @@
     "autoprefixer": "^10.4.7",
     "eslint": "^8.17.0",
     "eslint-config-next": "^12.1.6",
-    "jest": "^28.1.0",
+    "jest": "^28.1.1",
     "next-compose-plugins": "^2.2.1",
     "postcss": "^8.4.14",
     "react-test-renderer": "^18.1.0",
